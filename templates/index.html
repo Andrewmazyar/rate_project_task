@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for rate in rates %}
+    <ul>
+        <li>amount uah {{ rate.uah }} to 1 Dollar</li>
+        date: {{ rate.timestamp }}
+    </ul>
+    {% endfor %}
+    <a href="{% url 'create' %}">Add Rate</a>
+
+
+<canvas id="myChart" width="100" height="100"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="Chart.html"></script>
+
+</body>
+</html>
